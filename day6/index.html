@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="../day6/css/normalize.css">
+
+    <style>
+        .menu{
+            width: 1033px;
+            margin: 0px auto;
+        }
+        .menu .menu-content {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: rgba(11, 7, 26, 0.05);
+        }
+
+        .menu .menu-content .button {
+            float: left;
+        }
+
+        .menu .menu-content .button a{
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            padding-top: 7px;
+            padding-right: 5px;
+            padding-bottom: 5px;
+        }
+
+        .sub-menu {
+            display: none;
+            padding: 0px;
+            position: absolute;
+            background: white;
+        }
+
+        .sub-menu li{
+            display: block;
+            border-bottom: 1px solid rgba(17, 19, 28, 0.12);
+        }
+
+        .menu .menu-content .button .sub-menu li a{
+            color: black;
+            padding: 10px 10px;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .button:hover .sub-menu {
+            display: block;
+        }
+
+        .menu .menu-content .aa {
+            border-top: 2px solid blue;
+        }
+        .menu .menu-content .aa a{
+            color: blue;
+        }
+        .menu .menu-content .bb {
+            border-top: 2px solid greenyellow;
+        }
+        .menu .menu-content .bb a{
+            color: greenyellow;
+        }
+        .menu .menu-content .cc {
+            border-top: 2px solid orange;
+        }
+        .menu .menu-content .cc a{
+            color: orange;
+        }
+        .menu .menu-content .dd {
+            border-top: 2px solid red;
+        }
+        .menu .menu-content .dd a{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <ul class="menu-content">
+        <li class="aa button">
+            <a href="#" title="Tin tức">
+                <img src="img/home.png" width="26" height="23">
+            </a>
+        </li>
+        <li class="aa button">
+            <a href="#">Thời sự</a>
+            <ul class="sub-menu">
+                <li><a href="#">Giao thông</a></li>
+                <li><a href="#">Đô thị</a></li>
+                <li><a href="#">Đời sống</a></li>
+                <li><a href="#">Quốc phòng</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="aa button">
+            <a href="#">Thế giới</a>
+            <ul class="sub-menu">
+                <li><a href="#">Ảnh & Video</a></li>
+                <li><a href="#">Quân sự</a></li>
+                <li><a href="#">Tư liệu</a></li>
+                <li><a href="#">Phân Tích</a></li>
+                <li><a href="#">Người Việt 4 phương</a></li>
+            </ul>
+        </li>
+        <li class="aa button">
+            <a href="#">Kinh doanh</a>
+            <ul class="sub-menu">
+                <li><a href="#">Tài chính</a></li>
+                <li><a href="#">Chứng khoán</a></li>
+                <li><a href="#">Bất động sản</a></li>
+                <li><a href="#">Doanh nhân</a></li>
+            </ul>
+        </li>
+        <li class="aa button">
+            <a href="#">Pháp luật</a>
+            <ul class="sub-menu">
+                <li><a href="#">Pháp đình</a></li>
+                <li><a href="#">Vụ án</a></li>
+            </ul>
+        </li>
+        <li class="bb button">
+            <a href="#">Xuất bản</a>
+            <ul class="sub-menu">
+                <li><a href="#">Tin tức xuất bản</a></li>
+                <li><a href="#">Sách hay</a></li>
+                <li><a href="#">Tác giả</a></li>
+            </ul>
+        </li>
+        <li class="bb button">
+            <a href="#">Thể thao</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="bb button">
+            <a href="#">Công nghệ</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="bb button">
+            <a href="#">Xe 360</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="cc button">
+            <a href="#">Giải trí</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="cc button">
+            <a href="#">Âm nhạc</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="cc button">
+            <a href="#">Phim ảnh</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="cc button">
+            <a href="#">Thời trang</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="dd button">
+            <a href="#">Sống trẻ</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="dd button">
+            <a href="#">Giáo dục</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="dd button">
+            <a href="#">Sức khỏe</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+        <li class="dd button">
+            <a href="#">Du lịch</a>
+            <ul class="sub-menu">
+                <li><a href="#">Thể thao Việt Nam</a></li>
+                <li><a href="#">Cúp Châu Âu</a></li>
+                <li><a href="#">Thể thao Thế giới</a></li>
+                <li><a href="#">Bóng đá Anh</a></li>
+                <li><a href="#">Bóng đá Việt Nam</a></li>
+                <li><a href="#">Ảnh & Video</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+</body>
+</html>

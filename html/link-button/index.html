@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .menu{
+            width: 1240px;
+            margin: 0px auto;
+        }
+        .menu .menu-content {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: rgba(11, 7, 26, 0.05);
+        }
+
+        .menu .menu-content .button {
+            float: left;
+        }
+
+        .menu .menu-content .button a{
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            padding: 7px 3px;
+        }
+
+        .sub-menu {
+            display: none;
+            padding: 0px;
+            position: absolute;
+            background: white;
+        }
+
+        .sub-menu li{
+            display: block;
+        }
+        
+        .sub-menu li a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: left;
+        }
+
+        .button:hover .sub-menu {
+            display: block;
+        }
+
+        .menu .menu-content .aa {
+            border-top: 2px solid blue;
+        }
+        .menu .menu-content .aa a{
+            color: blue;
+        }
+        .menu .menu-content .bb {
+            border-top: 2px solid greenyellow;
+        }
+        .menu .menu-content .bb a{
+            color: greenyellow;
+        }
+        .menu .menu-content .cc {
+            border-top: 2px solid orange;
+        }
+        .menu .menu-content .cc a{
+            color: orange;
+        }
+        .menu .menu-content .dd {
+            border-top: 2px solid red;
+        }
+        .menu .menu-content .dd a{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <ul class="menu-content">
+        <li class="aa button">
+            <a href="#" title="Tin tức">
+                <img src="img/home.png" width="26" height="23">
+            </a>
+        </li>
+        <li class="aa button">
+            <a href="#">Thời sự</a>
+            <ul class="sub-menu">
+                <li><a href="#">Giao thông</a></li>
+                <li><a href="#">Giao thông</a></li>
+                <li><a href="#">Giao thông</a></li>
+            </ul>
+        </li>
+        <li class="aa button"><a href="#">Thế giới</a> </li>
+        <li class="aa button"><a href="#">Kinh doanh</a> </li>
+        <li class="aa button"><a href="#">Pháp luật</a> </li>
+        <li class="bb button"><a href="#">Xuất bản</a> </li>
+        <li class="bb button"><a href="#">Thể thao</a> </li>
+        <li class="bb button"><a href="#">Công nghệ</a> </li>
+        <li class="bb button"><a href="#">Xe 360</a> </li>
+        <li class="cc button"><a href="#">Giải trí</a> </li>
+        <li class="cc button"><a href="#">Âm nhạc</a> </li>
+        <li class="cc button"><a href="#">Phim ảnh</a> </li>
+        <li class="cc button"><a href="#">Thời trang</a> </li>
+        <li class="dd button"><a href="#">Sống trẻ</a> </li>
+        <li class="dd button"><a href="#">Giáo dục</a> </li>
+        <li class="dd button"><a href="#">Sức khỏe</a> </li>
+        <li class="dd button"><a href="#">Du lịch</a> </li>
+        <li class="button">
+            <a href="#">button</a>
+            <ul class="sub-menu">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 1</a></li>
+
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+</body>
+</html>
