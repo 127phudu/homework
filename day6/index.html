@@ -7,23 +7,31 @@
     <link rel="stylesheet" type="text/css" href="../day6/css/normalize.css">
 
     <style>
-        .menu{
+        body{
+            height: 2000px;
+        }
+        .wrap{
             width: 1033px;
             margin: 0px auto;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 1000;
+            background: rgba(11, 7, 26, 0.05);
         }
-        .menu .menu-content {
+        .wrap .wrap-content {
             list-style: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background: rgba(11, 7, 26, 0.05);
+
         }
 
-        .menu .menu-content .button {
+        .wrap .wrap-content .button {
             float: left;
         }
 
-        .menu .menu-content .button a{
+        .wrap .wrap-content .button a{
             display: inline-block;
             text-align: center;
             text-decoration: none;
@@ -32,58 +40,58 @@
             padding-bottom: 5px;
         }
 
-        .sub-menu {
+        .sub-wrap {
             display: none;
             padding: 0px;
             position: absolute;
             background: white;
         }
 
-        .sub-menu li{
+        .sub-wrap li{
             display: block;
             border-bottom: 1px solid rgba(17, 19, 28, 0.12);
         }
 
-        .menu .menu-content .button .sub-menu li a{
+        .wrap .wrap-content .button .sub-wrap li a{
             color: black;
             padding: 10px 10px;
             text-decoration: none;
             text-align: left;
         }
 
-        .button:hover .sub-menu {
+        .button:hover .sub-wrap {
             display: block;
         }
 
-        .menu .menu-content .aa {
+        .wrap .wrap-content .aa {
             border-top: 2px solid blue;
         }
-        .menu .menu-content .aa a{
+        .wrap .wrap-content .aa a{
             color: blue;
         }
-        .menu .menu-content .bb {
+        .wrap .wrap-content .bb {
             border-top: 2px solid greenyellow;
         }
-        .menu .menu-content .bb a{
+        .wrap .wrap-content .bb a{
             color: greenyellow;
         }
-        .menu .menu-content .cc {
+        .wrap .wrap-content .cc {
             border-top: 2px solid orange;
         }
-        .menu .menu-content .cc a{
+        .wrap .wrap-content .cc a{
             color: orange;
         }
-        .menu .menu-content .dd {
+        .wrap .wrap-content .dd {
             border-top: 2px solid red;
         }
-        .menu .menu-content .dd a{
+        .wrap .wrap-content .dd a{
             color: red;
         }
     </style>
 </head>
 <body>
-<div class="menu">
-    <ul class="menu-content">
+<div class="wrap">
+    <ul class="wrap-content">
         <li class="aa button">
             <a href="#" title="Tin tức">
                 <img src="img/home.png" width="26" height="23">
@@ -91,7 +99,7 @@
         </li>
         <li class="aa button">
             <a href="#">Thời sự</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Giao thông</a></li>
                 <li><a href="#">Đô thị</a></li>
                 <li><a href="#">Đời sống</a></li>
@@ -101,7 +109,7 @@
         </li>
         <li class="aa button">
             <a href="#">Thế giới</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Ảnh & Video</a></li>
                 <li><a href="#">Quân sự</a></li>
                 <li><a href="#">Tư liệu</a></li>
@@ -111,7 +119,7 @@
         </li>
         <li class="aa button">
             <a href="#">Kinh doanh</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Tài chính</a></li>
                 <li><a href="#">Chứng khoán</a></li>
                 <li><a href="#">Bất động sản</a></li>
@@ -120,14 +128,14 @@
         </li>
         <li class="aa button">
             <a href="#">Pháp luật</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Pháp đình</a></li>
                 <li><a href="#">Vụ án</a></li>
             </ul>
         </li>
         <li class="bb button">
             <a href="#">Xuất bản</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Tin tức xuất bản</a></li>
                 <li><a href="#">Sách hay</a></li>
                 <li><a href="#">Tác giả</a></li>
@@ -135,7 +143,7 @@
         </li>
         <li class="bb button">
             <a href="#">Thể thao</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -146,7 +154,7 @@
         </li>
         <li class="bb button">
             <a href="#">Công nghệ</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -157,7 +165,7 @@
         </li>
         <li class="bb button">
             <a href="#">Xe 360</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -168,7 +176,7 @@
         </li>
         <li class="cc button">
             <a href="#">Giải trí</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -179,7 +187,7 @@
         </li>
         <li class="cc button">
             <a href="#">Âm nhạc</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -190,7 +198,7 @@
         </li>
         <li class="cc button">
             <a href="#">Phim ảnh</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -201,7 +209,7 @@
         </li>
         <li class="cc button">
             <a href="#">Thời trang</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -212,7 +220,7 @@
         </li>
         <li class="dd button">
             <a href="#">Sống trẻ</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -223,7 +231,7 @@
         </li>
         <li class="dd button">
             <a href="#">Giáo dục</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -234,7 +242,7 @@
         </li>
         <li class="dd button">
             <a href="#">Sức khỏe</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -245,7 +253,7 @@
         </li>
         <li class="dd button">
             <a href="#">Du lịch</a>
-            <ul class="sub-menu">
+            <ul class="sub-wrap">
                 <li><a href="#">Thể thao Việt Nam</a></li>
                 <li><a href="#">Cúp Châu Âu</a></li>
                 <li><a href="#">Thể thao Thế giới</a></li>
@@ -256,7 +264,7 @@
         </li>
     </ul>
 </div>
-
+<p>gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</p>
 
 
 </body>
