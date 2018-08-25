@@ -31,7 +31,7 @@ $table[] = array('product_id' => 3, 'product_name' => 'car', 'product_price' => 
         </tr>
         </thead>
         <?php
-            foreach ($table as $key => $value){
+            foreach ($table as $value){
                 {?>
                     <tr>
                         <td><?php echo $value['product_id']?></td>
