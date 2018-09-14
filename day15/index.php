@@ -47,8 +47,8 @@ $result = $connection->query($sql);
         while($row = $result->fetch_row()){ ?>
             <tr>
                 <?php
-                foreach($row as $key => $value){?>
-                    <td> <?php echo $row[$key]?></td>
+                foreach($row as  $value){?>
+                    <td> <?php echo $value?></td>
                 <?php }
                 ?>
             </tr>
