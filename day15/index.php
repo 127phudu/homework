@@ -24,9 +24,12 @@ if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
-$sql = "SELECT * FROM article";
+$sql = "SELECT * FROM article where id = 5";
 $result = $connection->query($sql);
 
+echo '<pre>';
+print_r($result);
+echo '</pre>';
 
 ?>
 
