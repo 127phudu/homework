@@ -1,0 +1,23 @@
+1. Tạo controller
+-Controller phải được đặt trong thư mục App\Http\controllers
+-Tên của controller phải giống với tên class trong file controller đó
+-Class controller được tạo phải kế thừa từ Controller
+
+-có thể tạo bằng gõ tay hoặc dùng lệnh
+    php artisan make:controller controllername
+
+    hoặc
+    php artisan make:controller controllername --resource
+    để tạo resource controllers
+
+    trong đó controllername là tên controller muốn tạo
+
+2.Sử dụng
+- truyền phương thức muốn dùng trong route
+    Route::get('call-controller','homecontroller@index');
+    homecontroller@index nghĩa là phương thức index trong controller homecontroller
+
+- Truyền tham số như truyền tham số trong route
+
+
+

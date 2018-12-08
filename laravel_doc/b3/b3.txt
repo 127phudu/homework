@@ -1,0 +1,22 @@
+1. Route là hình thức định dạng cho request(nhận từ url) và định hướng các hành động khi nhận được request đó
+2. Một số loại Route
+Route::get nhận resquest với phương thức GET.
+Route::post nhận resquest với phương thức POST.
+Route::delete nhận resquest với phương thức DELETE.
+Route::match kết hợp nhiều phương phức như POST,GET,..
+Route::any nhận tất cả các phương thức.
+Route::group tạo ra các nhóm route.
+Route::controller gọi đến controller tương ứng mà chúng ta tự định.
+Route::resource sử dụng với resource controller.
+
+3. Sử dụng route
+Định nghĩa route trong file routes/web.php
+Cú pháp
+    Route::get($url, $action);
+    Route::post($url, $action);
+    Route::match($method, $url, $action);
+    Route::any($url, $action);
+trong đó:
+    $url là đường dẫn của route
+    $action là các hành động
+    $method là một mảng lưu tên các phương thức

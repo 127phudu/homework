@@ -1,0 +1,31 @@
+app: Chứa các thư mục, các tập tin php, thư viện, models.
+Console: Chứa các tập tin định nghĩa các câu lệnh trên artisan.
+Excerption:  Chứa các tập tin quản lý, điều hướng lỗi.
+Http
+Controllers : Chứa các controllers của project.
+Middleware:  Chứa các tập tin lọc và ngăn chặn các requests.
+Kernel.php:  Cấu hình, định nghĩa Middleware.
+Providers: Chứ các providers thực hiện việc binding vào service container(ở phần nâng cao mình sẽ nói sau).
+User.php: Là model User mà Laravel tự địn sẵn cho chúng ta.
+bootstrap:Chứa tập tin điều hướng hệ thống.
+config: Chứa mọi tập tin cấu hình của Laravel.
+database: Chứa các thư mục tập tin vềdatabase.
+ migrations: Chứa các tập tin định nghĩa,khởi tạo và sửa bảng.
+ seeds: Chứa các tập tin định nghĩa dữ liệu insert(thêm) vào trong database.
+ factories: Chứa các tập tin định nghĩa các cột bảng dữ liệu để tạo ra các dữ liệu ảo.
+public: Chứa các tập tin css, js, image.
+index.php: Đây là tệp tin root của Laraver
+resources: Chứa các views, ngôn ngữ(language) của project.
+routes: Chứa các tập tin định nghĩa các router, xử lý điều hướng router bao gồm : web, api và console.
+storage: Chứa các tập tin hệ thống cache, session, ...
+ tests: ...
+vendor: Chứa các thư viện của composer.
+.env: Là tập tin cấu hình chính của laravel như key app,database.
+.env.example: Tệp tin cấu hình mẫu của laraver.
+composer.json: tập tin của composer.
+ composer.lock: tập tin của composer.
+package.js: Tập tin cấu hình của nodejs (chứa các package cần dùng cho projects).
+gulpfile.js: Là tập tin gulp builder.
+phpunit.xml: Là tập tin xml của phpunit dùng để testing project.
+server.php: Là tập tin để artisan trỏ đến tạo server khi gõ lệnh php artisan serve .
+artisan: Tập tin thực thi lệnh của Laravel.

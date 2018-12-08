@@ -1,0 +1,26 @@
+1. Tạo view trong laravel
+- Các view trong laravel đều được đặt trong thư mục resources/views
+- Các file view có phải có đuôi .blade.php để sử dụng blade template của laravel
+- Có thể tổ chức các view thành các thư mục khác nhau trong resources/views
+
+2. Gọi view
+cú pháp:
+    view('duongdantoiview', 'dulieu');
+    duongdantoiview: là đường dẫn tới file view tính từ thư mục resources/views
+    dulieu là dữ liệu truyền vào
+
+3. Chia sẻ dữ liệu giữa các view:
+Dùng để truyền 1 dữ liệu nào đó cho tất cả các view mà không cần nhắc tới khi gọi view
+Cài đặt: Chèn đoạn code sau vào hàm boot trong file app/Providers/AppServiceProvider.php
+    View::share('key', 'value');
+
+4. Cách truyền dữ liệu vào view:
+-Dùng hàm compact()
+view('tenview', compact(['bien1', 'bien2', ...]));
+
+-Dùng with()
+view('tenview')->with('key', 'value');
+VD:  view('hello-user')->with('user', $user);
+
+-Dùng mảng
+view('hello-user', ['user' => $user]);

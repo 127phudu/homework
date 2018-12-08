@@ -1,0 +1,18 @@
+1. Route::resource()
+Cú pháp:
+    Route::resource('url', 'tencontroller', 'tuybien');
+    Url: thì cũng như các route khác là đường dẫn của route.
+    tencontroller: là tên của controller (không đi kèm đuôi .php).
+    tuybien: là các tùy biến phương thức được sử dụng trong Route, tham số này có thể bỏ qua
+
+Sử dụng:
+    Loại route này định nghĩa 1 tập hợp các route với các kiểu request khác nhau và phương thức khác nhau để
+    gọi tới 1 controller có cài đặt các phương thức "chuẩn" (REST controller)
+2. Route::group()
+Cú pháp:
+    Route::group($attr, $handle);
+    $attr: là các mảng gồm các thuộc tính được chia sẻ cho các route trong group (vd: middleware,prefix,namespace,domain)
+    $handle: là các đoạn xử lý
+
+Sử dụng:
+    Cho phép chia sẻ các thuộc tính như middleware, namespace, ... cho các route thành viên.

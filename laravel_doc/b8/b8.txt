@@ -1,0 +1,15 @@
+-Tạo một view gốc
+-Các file muốn sử dụng lại view gốc chỉ cần gọi nó qua câu lệnh @extends('tên view')
+-Trong file view gốc có các vùng được đánh dấu bằng cú pháp
+    @section('tên vùng')
+    @show
+hoặc
+    @yield('tên vùng')
+
+view kế thừa view gốc có thể chèn thêm các thẻ html vào vùng này bằng các sử dụng cú pháp
+    @section('tên vùng')
+    @endsection
+
+Trong vùng đánh dấu của view con có thể thêm @parent để chèn nội dung sẵn có của vùng đánh dấu trong file gốc
+
+

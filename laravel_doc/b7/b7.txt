@@ -1,0 +1,44 @@
+1. Tạo blade template trong Laravel
+- Tạo file có đuôi .blade.php trong thư mục resources/views
+- Chỉ có các file view mới thuộc template này
+
+2. Sử dụng blade template
+-Có 2 dạng in ra màn hình
+   + {{ 'bien' }}
+    đây là dạng in ra dữ liệu thô(có gì in nấy)
+   + {{!! 'bien' !!}}
+    đây là dạng in ra dữ liệu có xử lí qua bằng html
+
+-Dữ liệu mặc định
+    {{ $a or 5 }}
+    Nếu $a tồn tại thì in ra $a, không thì in ra 5
+
+-Các vòng lặp:
+
+    @for ($i = 0; $i < 10; $i++)
+        //code
+    @endfor
+
+    @foreach ($users as $user)
+        //code
+    @endforeach
+
+    @forelse($users as $user)
+        //code
+    @empty
+        //code
+    @endforelse
+
+    @while (true)
+        //code
+    @endwhile
+
+-rẽ nhánh:
+
+    @if ()
+        //code
+    @elseif ()
+        //code
+    @else
+        //code
+    @endif

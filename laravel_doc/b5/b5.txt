@@ -1,0 +1,15 @@
+1. Truyền tham số cho route:
+    Xác định thành phần biến truyền vào từ URL bằng cách đặt trong dấu {}
+
+    Route::get('thongtin/{tuoi}/{ten}', function($tuoi, $ten) {
+       return "Hello $ten , $tuoi tuổi";
+    });
+
+2. Có thể cài đặt ràng buộc để chuẩn hóa biến đầu vào:
+
+    Route::get('thongtin/{tuoi}/{ten}', function($tuoi, $ten) {
+       return "hello $ten , $tuoi tuổi";
+    })->where(['tuoi' => '[0-9]+', 'ten' => '[a-z]+']);
+
+    'tuoi' => '[0-9]+'  nghĩa là biến tuoi chỉ gồm các kí tự từ 0-9
+    'ten' => '[a-z]+'   nghĩa là biến ten chỉ gồm các kí tự in thường từ a-z

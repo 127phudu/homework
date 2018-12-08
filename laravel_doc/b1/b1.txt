@@ -1,0 +1,14 @@
+ Tải và cài đặt Laravel
+1. Cách 1: cài bằng composer
+-b1: Tải và cài đặt composer
+-b2: Mở cửa sổ dòng lệnh trong thư mục htdocs
+-b3: Gõ lệnh
+composer create-project laravel/laravel lar-53 --prefer-dist
+Trong đó lar-53 là tên thư mục chứa laravel, có thể đặt lại tùy ý
+
+2. Cách 2: cài bằng composer.phar
+-b1: Tải source code của Laravel về máy trước
+-b2: Mở cửa sổ dòng lệnh trong thư mục chứa project rồi chạy lệnh
+composer.phar install
+-b3: chạy lệnh:
+php artisan key:generate

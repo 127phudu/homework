@@ -1,0 +1,9 @@
+query builder
+
+1. cấu hình database
+-cấu hình các biến
+DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD
+-Sử dụng các hàm cho sẵn để truy vấn từ đơn giản đến phức tạp
+-Nếu truy vấn trong controllers thì phải khai báo
+    use Illuminate\Support\Facades\DB;
+  trong route thì không
