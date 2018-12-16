@@ -18,113 +18,93 @@
 
 </head>
 <body>
-<div class="container">
-    <h2>Giỏ hàng</h2>
-    <p>Chi tiết giỏ hàng</p>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Mã sản phẩm</th>
-            <th>Tên sản phẩm</th>
-            <th>Ảnh</th>
-            <th>Giá cả</th>
-            <th>Số lượng</th>
-            <th>Thành tiền</th>
-            <th>Xóa</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>1</td>
-            <td>camera</td>
-            <td>camera.jpg</td>
-            <td>150000</td>
-            <td>2</td>
-            <td>300000</td>
-            <th><a href="#">Xóa</a></th>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>camera</td>
-            <td>hard-drive.jpg</td>
-            <td>2000000</td>
-            <td>2</td>
-            <td>4000000</td>
-            <th><a href="#">Xóa</a></th>
-        </tr>
-        </tbody>
-    </table>
-    <div>Tổng hóa đơn thanh toán: <strong>4300000</strong></div>
-</div>
 
 <div class="container">
+    <?php
+        require_once 'database.php';
+        $db = new Database();
+        $conn = Database::$connection;
+        $sql = "SELECT * FROM products LIMIT 6";
+        $products = $conn->query($sql);
+
+        if ($products->num_rows > 0) {
+            while($row = $products->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+    ?>
+
     <div class="row">
-        <div class="col-md-6">
-            <form name="product1" action="" method="post">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" style="height: 315px; width: 100%; display: block" src="images/camera.jpg" data-holder-rendered="true">
-                    <div class="card-body">
-                        <p class="card-text">Sản phẩm 1</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="form-inline">
-                                <input type="text" class="form-control" name="quantity" value="1">
-                                <button type="submit" class="btn btn-sm btn-outline-secondary" style="margin-left: 20px">Thêm vào giỏ hàng</button>
+        <?php
+        foreach ($data as $value) {?>
+            <div class="col-md-4">
+                <form>
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" style="height: 315px; width: 100%; display: block" src="images/camera.jpg" data-holder-rendered="true">
+                        <div class="card-body">
+                            <p class="card-text"><?php echo $value['name']?></p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="form-inline">
+                                    <input type="text" class="form-control" name="quantity" value="1" style="width: 30%">
+                                    <button class="btn btn-sm btn-outline-secondary" style="margin-left: 20px">Thêm vào giỏ hàng</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-6">
-            <form name="product2" action="" method="post">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" style="height: 315px; width: 100%; display: block" src="images/laptop.jpg" data-holder-rendered="true">
-                    <div class="card-body">
-                        <p class="card-text">Sản phẩm 1</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="form-inline">
-                                <input type="text" class="form-control" name="quantity" value="1">
-                                <button type="submit" class="btn btn-sm btn-outline-secondary" style="margin-left: 20px">Thêm vào giỏ hàng</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-6">
-            <form name="product3" action="" method="post">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" style="height: 315px; width: 100%; display: block" src="images/hdd.png" data-holder-rendered="true">
-                    <div class="card-body">
-                        <p class="card-text">Sản phẩm 1</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="form-inline">
-                                <input type="text" class="form-control" name="quantity" value="1">
-                                <button type="submit" class="btn btn-sm btn-outline-secondary" style="margin-left: 20px">Thêm vào giỏ hàng</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-6">
-            <form name="product4" action="" method="post">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" style="height: 315px; width: 100%; display: block" src="images/smartwatch.jpg" data-holder-rendered="true">
-                    <div class="card-body">
-                        <p class="card-text">Sản phẩm 1</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="form-inline">
-                                <input type="text" class="form-control" name="quantity" value="1">
-                                <button type="submit" class="btn btn-sm btn-outline-secondary" style="margin-left: 20px">Thêm vào giỏ hàng</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
+
+        <?php }
+        ?>
+    </div>
+    <div style="margin: 10px; text-align: center">
+        <button id="load-more" type="button" class="btn btn-vimeo">Load more</button>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#load-more').on('click', function(e) {
+            alert('click');
+            e.preventDefault();
+            var params = {};
+            params.offset = $('.row').children('.col-md-4').length;
+            params.limit = 3;
+            params.type = 'product';
+
+            jQuery.ajax({
+                url : 'http://localhost/homework/simple_ajax/ajax.php',
+                data: params,
+                type: 'POST',
+                dataType: 'json',
+                beforeSend: function() {
+                    alert('beforeSend');
+                },
+                success: function(data) {
+                    alert('success');
+                    console.log(data);
+                    if (data.html) {
+                        $('.row').append(data.html);
+                    } else {
+                        $('#load-more').hide();
+                        alert('load more completed');
+                    }
+
+                },
+                error: function (xhr) {
+                    alert('error');
+                },
+                complete: function (xhr, status) {
+                    alert('complete');
+                }
+            });
+
+
+        });
+
+
+    });
+</script>
 
 </body>
 </html>

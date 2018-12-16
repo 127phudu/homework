@@ -3,15 +3,8 @@ class Database {
 
     public static $connection = null;
 
-    /**
-     * $db = new Database();
-     * Database constructor.
-     */
     public function __construct()
     {
-        /**
-         * Lan chay thu 2
-         */
         if(self::$connection){
             return self::$connection;
         }
@@ -27,7 +20,7 @@ class Database {
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $db_name = "ajax_sql";
+        $db_name = "simple_ajax";
 
         // Create connection
         self::$connection = new mysqli($servername, $username, $password, $db_name);
