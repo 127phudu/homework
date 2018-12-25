@@ -16,7 +16,7 @@
         <tr>
             <th scope="col">id</th>
             <th scope="col">Name</th>
-            <th scope="col">cat_id</th>
+            <th scope="col">Danh mục</th>
             <th scope="col">price</th>
             <th scope="col">Cập nhật lần cuối</th>
             <th scope="col">Action</th>
@@ -27,7 +27,7 @@
             <tr>
                 <th scope="row">{{ $product['id'] }}</th>
                 <td>{{ $product['name'] }}</td>
-                <td>{{ $product['cat_id'] }}</td>
+                <td>{{ $categoryName[$product['cat_id']] }}</td>
                 <td>{{ $product['price'] }}</td>
                 <td> {{ $product['updated_at'] }}</td>
                 <td>

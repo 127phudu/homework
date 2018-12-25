@@ -10,7 +10,16 @@ class Product extends Controller
 {
     public function index () {
         $products = ProductModel::all();
+        $cats = CategoryModel::all();
+
+        $categoryName = array();
+
+        foreach ($cats as $cat) {
+            $categoryName[$cat['id']] = $cat['name'];
+        }
+
         $data = array();
+        $data['categoryName'] = $categoryName;
         $data['products'] = $products;
 
         return view('product.index', $data);
