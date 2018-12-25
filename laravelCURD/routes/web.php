@@ -11,21 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Category@index');
 
-//Index
+//category
 Route::get('/category', 'Category@index');
-
-
-//Insert
 Route::get('/category/insert', 'Category@insert');
-
-
-//Edit
 Route::get('/category/{id}/edit', 'Category@edit');
-
-
-//Delete
 Route::get('/category/{id}/delete', 'Category@delete');
+Route::post('/category', 'Category@create');
+Route::post('/category/{id}', 'Category@update');
+Route::get('/category/{id}/destroy', 'Category@destroy');
+
+//category
+Route::get('/product', 'Product@index');
+Route::get('/product/insert', 'Product@insert');
+Route::get('/product/{id}/edit', 'Product@edit');
+Route::get('/product/{id}/delete', 'Product@delete');
+Route::post('/product', 'Product@create');
+Route::post('/product/{id}', 'Product@update');
+Route::get('/product/{id}/destroy', 'Product@destroy');
+
+//comment
+Route::get('/comment', 'Comment@index');
+Route::get('/comment/insert', 'Comment@insert');
+Route::get('/comment/{id}/edit', 'Comment@edit');
+Route::get('/comment/{id}/delete', 'Comment@delete');
+Route::post('/comment', 'Comment@create');
+Route::post('/comment/{id}', 'Comment@update');
+Route::get('/comment/{id}/destroy', 'Comment@destroy');

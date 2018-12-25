@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-    <a class="btn btn-primary" href="{{ url('/category/'.$id) }}">Xóa</a>
+    <a class="btn btn-primary" href="{{ url('/category/'.$id."/destroy") }}">Xóa</a>
 @endsection

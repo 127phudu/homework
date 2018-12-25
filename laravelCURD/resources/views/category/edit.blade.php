@@ -1,14 +1,15 @@
 @extends('layouts.layout')
 
 @section('header')
-    Sửa bài viết số {{ $id }}
+    Sửa danh mục số {{ $cat['id'] }}
 @endsection
 
 @section('content')
-    <form action="{{ url('/category/'.$id  ) }}" method="post">
+    <form action="{{ url('/category/'.$cat['id']  ) }}" method="post">
+        @csrf
         <div class="form-group">
-            <label for="content">Nội dung</label>
-            <input type="text" class="form-control" id="content" placeholder="Nhập">
+            <label for="content">Tên</label>
+            <input type="text" class="form-control" id="content" name="name" value="{{ $cat['name'] }}">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

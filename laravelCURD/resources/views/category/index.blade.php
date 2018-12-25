@@ -1,56 +1,42 @@
 @extends('layouts.layout')
 
 @section('header')
-    Danh sach bai viet
+
+    Danh sách danh mục
+
 @endsection
 
 @section('content')
     <div class="insert">
-        <a class="btn btn-primary" href="{{ url('category/insert') }}">Them moi</a>
+        <a class="btn btn-primary" href="{{ url('category/insert') }}">Thêm mới</a>
     </div>
-
 
     <table class="table table-striped table-bordered">
         <thead class="thead-light">
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Cập nhật lần cuối</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>
-                <a class="btn btn-success btn-xs" href="{{ url('category/1/edit') }}" >sua</a>
-                <a class="btn btn-danger btn-xs" href="{{ url('category/1/delete') }}">xoa</a>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>
-                <a class="btn btn-success btn-xs" href="{{ url('category/2/edit') }}" >sua</a>
-                <a class="btn btn-danger btn-xs" href="{{ url('category/2/delete') }}">xoa</a>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>
-                <a class="btn btn-success btn-xs" href="{{ url('category/3/edit') }}" >sua</a>
-                <a class="btn btn-danger btn-xs" href="{{ url('category/3/delete') }}">xoa</a>
-            </td>
-        </tr>
+        @foreach($cats as $cat)
+            <tr>
+                <th scope="row">{{ $cat['id'] }}</th>
+                <td>{{ $cat['name'] }}</td>
+                <td> {{ $cat['updated_at'] }}</td>
+                <td>
+                    <a class="btn btn-success btn-xs" href="{{ url('category/'.$cat['id'].'/edit') }}" >Sửa</a>
+                    <a class="btn btn-danger btn-xs" href="{{ url('category/'.$cat['id'].'/delete') }}">Xóa</a>
+                </td>
+            </tr>
+
+
+        @endforeach
+
+
+
 
         </tbody>
     </table>

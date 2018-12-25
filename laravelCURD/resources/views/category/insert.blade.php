@@ -6,9 +6,10 @@
 
 @section('content')
     <form action="{{ url('/category') }}" method="post">
+        @csrf
         <div class="form-group">
-            <label for="content">Nội dung</label>
-            <input type="text" class="form-control" id="content" placeholder="Nhập">
+            <label for="content">Tên</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
