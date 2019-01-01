@@ -8,12 +8,21 @@ use App\Models\Product AS ProductModel;
 
 class Product extends Controller
 {
+
+    public function __construct()
+    {
+        $this->cart = \Cart::session($this->userId);
+    }
+
+    private $userId = 1;
+
+    private $cart;
+
     public function index () {
         $products = ProductModel::all();
         $cats = CategoryModel::all();
 
         $categoryName = array();
-
         foreach ($cats as $cat) {
             $categoryName[$cat['id']] = $cat['name'];
         }
@@ -21,7 +30,7 @@ class Product extends Controller
         $data = array();
         $data['categoryName'] = $categoryName;
         $data['products'] = $products;
-
+        $data['cartContent'] = $this->cart->getContent();
         return view('product.index', $data);
     }
 

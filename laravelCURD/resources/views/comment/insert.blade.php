@@ -12,7 +12,7 @@
             <input type="text" class="form-control" id="name" name="content" placeholder="Nhập comment">
         </div>
         <div class="form-group">
-            <label >Danh mục</label>
+            <label >Sản phẩm</label>
             <select name="product_id" style="min-width: 300px">
                 <option value="">None</option>
                 @foreach($products as $product)

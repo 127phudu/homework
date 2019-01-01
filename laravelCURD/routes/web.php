@@ -39,3 +39,8 @@ Route::get('/comment/{id}/delete', 'Comment@delete');
 Route::post('/comment', 'Comment@create');
 Route::post('/comment/{id}', 'Comment@update');
 Route::get('/comment/{id}/destroy', 'Comment@destroy');
+
+//cart
+Route::post('/cart/{id}/add', 'Cart@add');
+Route::get('/cart/{id}/remove', 'Cart@remove');
+
